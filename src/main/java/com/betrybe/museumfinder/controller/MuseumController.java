@@ -62,20 +62,20 @@ public class MuseumController {
   /**
    * Closest museum response entity.
    *
-   * @param lat         the lat
-   * @param lng         the lng
-   * @param max_dist_km the max dist km
+   * @param lat       the lat
+   * @param lng       the lng
+   * @param maxDistKm the max dist km
    * @return the response entity
    */
   @GetMapping("/closest")
   public ResponseEntity<Museum> closestMuseum(
       @RequestParam Double lat,
       @RequestParam Double lng,
-      @RequestParam Double max_dist_km
+      @RequestParam(name = "max_dist_km") Double maxDistKm
   ) {
     Coordinate coordinate = new Coordinate(lat, lng);
 
-    Museum result = museumService.getClosestMuseum(coordinate, max_dist_km);
+    Museum result = museumService.getClosestMuseum(coordinate, maxDistKm);
     return ResponseEntity.ok(result);
   }
 }
