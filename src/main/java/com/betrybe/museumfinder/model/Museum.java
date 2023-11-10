@@ -4,6 +4,7 @@ package com.betrybe.museumfinder.model;
  * The type Museum.
  */
 public class Museum {
+
   private Long id;
   private String name;
   private String description;
@@ -13,28 +14,6 @@ public class Museum {
   private String url;
   private Coordinate coordinate;
   private Long legacyId;
-
-  //  public Museum(
-  //      Long id,
-  //      String name,
-  //      String description,
-  //      String address,
-  //      String collectionType,
-  //      String subject,
-  //      String url,
-  //      Coordinate coordinate,
-  //      Long legacyId
-  //  ) {
-  //    this.id = id;
-  //    this.name = name;
-  //    this.description = description;
-  //    this.address = address;
-  //    this.collectionType = collectionType;
-  //    this.subject = subject;
-  //    this.url = url;
-  //    this.coordinate = coordinate;
-  //    this.legacyId = legacyId;
-  //  }
 
   /**
    * Gets id.

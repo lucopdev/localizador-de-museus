@@ -45,7 +45,7 @@ public class MuseumService implements MuseumServiceInterface {
       throw new MuseumNotFoundException();
     }
 
-    return museum.orElse(null);
+    return museum.get();
   }
 
   @Override
