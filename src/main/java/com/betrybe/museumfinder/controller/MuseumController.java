@@ -76,6 +76,6 @@ public class MuseumController {
     Coordinate coordinate = new Coordinate(lat, lng);
 
     Museum result = museumService.getClosestMuseum(coordinate, max_dist_km);
-    return ResponseEntity.status(200).body(result);
+    return ResponseEntity.ok(result);
   }
 }
